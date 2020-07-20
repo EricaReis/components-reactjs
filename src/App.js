@@ -4,6 +4,7 @@ import './App.css';
 import VideoList from './components/VideoList';
 import VideoPlayer from './components/VideoPlayer';
 import VideoCinema from './components/VideoCinema';
+import MyButton from './components/MyButton';
 
 import Time from './components/Time';
 
@@ -28,6 +29,7 @@ class App extends Component{
   }
   return (
     <div className="App">
+      <MyButton />
       <Time />
       {/* <MeuComponent {...dados}/> Exemplo de operador Spread */}
       <VideoList videos={state.videos}/>
