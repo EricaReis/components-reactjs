@@ -7,13 +7,21 @@ class Time extends Component{
             time: 0
         }
     //a cada 1 seg a atualização 
-    setInterval(() => {
-        this.setState((state, props)=>{
-            return{
-                time: state.time +1
-            }
-        })
-    }, 1000)
+    }
+
+    componentDidMount(){
+        this.interval = setInterval(() => {
+            console.log(this.state.time); 
+            this.setState((state, props)=>{
+                return{
+                    time: state.time +1
+                }
+            })
+        }, 1000)
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.interval);
     }
 
     render(){

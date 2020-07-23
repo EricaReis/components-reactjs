@@ -30,7 +30,6 @@ class App extends Component{
   return (
     <div className="App">
       <MyButton />
-      <Time />
       {/* <MeuComponent {...dados}/> Exemplo de operador Spread */}
       <VideoList videos={state.videos}/>
       <VideoPlayer video={state.selectedVideo}/>
