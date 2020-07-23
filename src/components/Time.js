@@ -6,7 +6,6 @@ class Time extends Component{
         this.state = {
             time: 0
         }
-    //a cada 1 seg a atualização 
     }
 
     componentDidMount(){
@@ -25,7 +24,6 @@ class Time extends Component{
     }
 
     render(){
-        const  { state } = this;
     return <div>{this.state.time}</div>
     }
 }

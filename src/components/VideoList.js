@@ -1,20 +1,19 @@
 import React from 'react';
 
-function VideoList(){
-    return(
-        <ul className = "video-list ">
-            <li className="video">
-                <img src="https://cdn.videvo.net/videvo_files/images/preview_cat_in_the_sun.jpg" alt="preview_cat_in_the_sun"/>
-                <div>preview_cat_in_the_sun</div>
-            </li>
-            <li className="video">
-                <img src="https://cdn.videvo.net/videvo_files/images/preview_cat_in_the_sun.jpg" alt="preview_cat_in_the_sun"/>
-                <div>preview_cat_in_the_sun</div>
-            </li>
-            <li className="video">
-                <img src="https://cdn.videvo.net/videvo_files/images/preview_cat_in_the_sun.jpg" alt="preview_cat_in_the_sun"/>
-                <div>preview_cat_in_the_sun</div>
-            </li>
+
+function VideoList(props){
+    const videos = props.videos || [];
+
+    return (
+        <ul className="video-list" >
+            {
+                videos.map(video => (
+                    <li key={video.id} className="video" >
+                        <img src={video.img} alt={video.name} />
+                        <div>{video.name}</div>
+                    </li>
+                ))
+            }
         </ul>
     )
 }
