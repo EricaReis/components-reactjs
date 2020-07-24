@@ -8,6 +8,8 @@ import VideoList from './components/VideoList';
 import VideoPlayer from './components/VideoPlayer';
 import VideoCinema from './components/VideoCinema';
 import ClickList from './components/ClickList';
+import ClickListItem from './components/CliclListItem';
+import MyVideo from './components/MyVideo';
 
 class App extends Component{
   constructor(props){
@@ -37,9 +39,11 @@ class App extends Component{
   return (
     <div className="App">
       {/* <MeuComponent {...dados}/> Exemplo de operador Spread */}
-      <ClickList>
-        <h1>pao</h1>
-        <h2>oi</h2>
+      <MyVideo src="https://ak.picdn.net/shutterstock/videos/1052750657/preview/stock-footage-childs-watercolour-rainbow-painting-on-w-matte-straight-edge-mp.webm" />
+      <ClickList number="123">
+        <ClickListItem></ClickListItem>
+        <ClickListItem></ClickListItem>
+        <ClickListItem></ClickListItem>
       </ClickList>
       <PeopleList />
       <VideoList videos={state.videos}/>
