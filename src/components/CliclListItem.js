@@ -24,11 +24,14 @@ class ClickListItem extends Component {
                 counter: state.counter + 1
             }
         })
-        this.props.handleClick();
+        Channel.emit('listItem:click', 35)
     }
 
     render() {
         const { state, props } = this;
+        if(state.counter > 4){
+            throw new Error('!!!!!');
+        }
         return (
             <li onClick={this.increment}>
                 Item {props.index } = {state.counter}
