@@ -7,6 +7,7 @@ import { VideoService } from './services/VideoService';
 import VideoList from './components/VideoList';
 import VideoPlayer from './components/VideoPlayer';
 import VideoCinema from './components/VideoCinema';
+import ClickList from './components/ClickList';
 
 class App extends Component{
   constructor(props){
@@ -36,6 +37,10 @@ class App extends Component{
   return (
     <div className="App">
       {/* <MeuComponent {...dados}/> Exemplo de operador Spread */}
+      <ClickList>
+        <h1>pao</h1>
+        <h2>oi</h2>
+      </ClickList>
       <PeopleList />
       <VideoList videos={state.videos}/>
       <VideoPlayer video={state.selectedVideo}/>
