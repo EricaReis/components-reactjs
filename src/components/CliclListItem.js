@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import { Channel } from '../services/EventEmitter';
 
+//branch test
+
 class ClickListItem extends Component {
 
     static defaultProps = {
